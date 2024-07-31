@@ -55,19 +55,49 @@ body {
     align-content: center;
 }
 
+/* Estilo para el contenedor del carrusel de videos */
 .hero-video-slider {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 40px;
+    width: 100%;
+    height: auto;
+    position: relative;
 }
 
-.hero-video-slider .slide video {
-    width: 100%;
-    max-width: 900px; /* Ajusta este valor al tamaño deseado */
-    height: auto;
-    display: block;
-    margin: 0 auto; /* Centrar el video horizontalmente */
+/* Estilo para cada slide del carrusel */
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
 }
+
+/* Estilo para los videos dentro del carrusel */
+.swiper-slide video {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+/* Estilo para los botones de navegación */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
 
 
 .image-text-component {
@@ -161,3 +191,4 @@ body {
     width: 100%;
     margin-top: 20px;
 }
+
