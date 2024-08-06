@@ -6,4 +6,40 @@ document.addEventListener('DOMContentLoaded', function () {
             prevEl: '.swiper-button-prev',
         },
     });
+
+    //Inicio Implementacion de los modales
+    const modalButtons = document.querySelectorAll('.modal-button');
+    const closeButtons = document.querySelectorAll('.close');
+    const modals = document.querySelectorAll('.modal');
+
+    modalButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const target = document.querySelector(button.getAttribute('data-target'));
+            target.classList.add('show');
+            setTimeout(() => {
+                target.style.display = 'block';
+            }, 100); // Permite que la clase `show` tome efecto antes de cambiar el display
+        });
+    });
+
+    closeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const target = button.closest('.modal');
+            target.classList.remove('show');
+            setTimeout(() => {
+                target.style.display = 'none';
+            }, 500); // Esperar a que termine la transición
+        });
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target.classList.contains('modal')) {
+            event.target.classList.remove('show');
+            setTimeout(() => {
+                event.target.style.display = 'none';
+            }, 500); // Esperar a que termine la transición
+        }
+    });
+    //Fin de la implementacion de los modales
+
 });

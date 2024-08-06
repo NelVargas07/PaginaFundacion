@@ -42,9 +42,12 @@ body {
     display: inline;
 }
 
-.primary-menu .menu-item {
+.primary-menu .menu-item 
+,.modal-button{
     text-decoration: none;
+    cursor: pointer;
     color: #333;
+    font: inherit;
     font-weight: 700;
     padding: 10px 15px;
     transition: color 0.3s;
@@ -262,3 +265,59 @@ body {
     font-size: 1em;
     line-height: 1.5;
 }
+
+/*inicio implementacion de modal */
+.modal-button{
+    padding: 0em;
+    border: none;
+    background: none;
+}
+
+.modal-button:hover {
+    color: #eef0f3;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.modal-content {
+    position: absolute;
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.7s ease, transform 0.7s ease;
+    width: 300px;
+}
+
+.modal.show .modal-content {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+.close {
+    cursor: pointer;
+    font-size: 24px;
+    float: right;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* fin implementacion de modal */
