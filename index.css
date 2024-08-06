@@ -161,3 +161,64 @@ body {
     width: 100%;
     margin-top: 20px;
 }
+
+
+.section-title {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.section-title h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin: 0;
+}
+
+.card-component {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 350px;
+    margin: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    background-color: #f35555;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-header h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.card-body {
+    padding: 20px;
+    color: #333;
+}
+
+.card-body p {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.5;
+}
