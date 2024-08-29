@@ -164,7 +164,7 @@ body {
     box-sizing: border-box;
     bottom: 0px;
     flex-shrink: 0;
-    position: absolute;
+    position: -ms-page;
 }
 
 .global-footer > div {
