@@ -29,21 +29,29 @@ body {
 .logo img {
     height: 80px;
 }
+.primary-menu {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+}
 
 .primary-menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
-    gap: 20px;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 .primary-menu li {
-    display: inline;
+    margin-right: 20px;
 }
 
-.primary-menu .menu-item 
-,.modal-button{
+.primary-menu .modal-button-container {
+    margin-left: auto; /* Empuja este elemento hacia la derecha */
+}
+
+.primary-menu .menu-item, .modal-button {
     text-decoration: none;
     cursor: pointer;
     color: #333;
@@ -53,9 +61,10 @@ body {
     transition: color 0.3s;
 }
 
-.primary-menu .menu-item:hover {
+.primary-menu .menu-item:hover, .modal-button:hover {
     color: #eef0f3;
 }
+
 
 .main {
     display: flexbox;
