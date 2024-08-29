@@ -219,11 +219,12 @@ body {
 
 .card-component {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Permite que las cards se ajusten al ancho del contenedor */
     gap: 20px;
     justify-content: center;
-    max-width: 1200px;
+    max-width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho disponible */
     margin: 0 auto;
+    padding: 0 20px; /* Añade padding para evitar que las cards toquen los bordes */
 }
 
 .card {
@@ -234,8 +235,8 @@ body {
     overflow: hidden;
     width: 100%;
     max-width: 350px;
-    margin: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1 1 300px; /* Permite que las cards se ajusten y crezcan según el espacio disponible */
 }
 
 .card:hover {
