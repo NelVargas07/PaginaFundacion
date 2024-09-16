@@ -15,9 +15,18 @@ document.addEventListener('DOMContentLoaded', function () {
     modalButtons.forEach(button => {
         button.addEventListener('click', () => {
             const target = document.querySelector(button.getAttribute('data-target'));
-            target.classList.add('show');
+            
+            const modalContent = target.querySelector('.modal-content'); // Asegúrate de seleccionar el contenido del modal
+
+            const buttonRect = button.getBoundingClientRect();
+
+            target.style.display = 'block';
+            
+            
             setTimeout(() => {
-                target.style.display = 'block';
+                modalContent.style.left = `${buttonRect.right - (modalContent.offsetWidth/2)}px`;
+
+                target.classList.add('show');    
             }, 100); // Permite que la clase `show` tome efecto antes de cambiar el display
         });
     });

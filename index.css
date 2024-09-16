@@ -307,18 +307,19 @@ body {
 }
 
 .modal-content {
+    box-sizing: border-box;
     position: absolute;
     background-color: white;
     margin: auto;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    left: 24%;
-    top: 14%;
+    left: 50%;
+    top: 106px;
     transform: translate(-50%, -50%);
     opacity: 0;
     transition: opacity 0.7s ease, transform 0.7s ease;
-    width: 300px;
+    width: 500px;
 }
 
 .modal.show .modal-content {
