@@ -18,13 +18,19 @@ document.addEventListener('DOMContentLoaded', function () {
             
             const modalContent = target.querySelector('.modal-content'); // Asegúrate de seleccionar el contenido del modal
 
+            //Para que no quede tan pegado a la parte derecha de la pantalla
+            //cuando se deba desplegar en esa posicion
+            const marginModal = 10;
+            
             const buttonRect = button.getBoundingClientRect();
 
             target.style.display = 'block';
             
+            //Manejar las posiciones del modal para que no se salga de la pantalla y este colocado donde se presiona el boton
+            const positionModal = buttonRect.x + modalContent.offsetWidth > window.innerWidth ? (buttonRect.x - (buttonRect.x + ((modalContent.offsetWidth/2) - window.innerWidth))) - marginModal  : buttonRect.x + modalContent.offsetWidth/2;
             
             setTimeout(() => {
-                modalContent.style.left = `${buttonRect.right - (modalContent.offsetWidth/2)}px`;
+                modalContent.style.left = `${positionModal}px`;
 
                 target.classList.add('show');    
             }, 100); // Permite que la clase `show` tome efecto antes de cambiar el display
