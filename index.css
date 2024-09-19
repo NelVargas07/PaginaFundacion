@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .global-header {
@@ -75,49 +76,63 @@ body {
 }
 
 /* Estilo para el contenedor del carrusel de videos */
-.hero-video-slider {
-    width: 100%;
-    height: auto;
-    position: relative;
-    margin-bottom: 20px;
+.hero-image-slider {
+    width: 100%; /* El carrusel ocupa todo el ancho del contenedor */
+    max-width: 1200px; /* Puedes ajustar el ancho máximo */
+    height: 500px; /* Altura del carrusel */
+    margin: 0 auto; /* Centrar el contenedor del carrusel */
+    position: relative; /* Necesario para el posicionamiento del contenido */
+    overflow: hidden; /* Oculta el contenido que se desborde */
 }
 
-/* Estilo para cada slide del carrusel */
 .swiper-slide {
+    display: flex;
+    justify-content: center; /* Centra la imagen horizontalmente */
+    align-items: center; /* Centra la imagen verticalmente */
+    height: 100%; /* Hace que las diapositivas ocupen toda la altura del carrusel */
+    text-align: center; /* Asegura que el contenido dentro de la diapositiva esté centrado */
+}
+
+.swiper-slide img {
+    width: 70%; /* Establece el ancho de la imagen al 70% del contenedor */
+    height: auto; /* Mantiene las proporciones de la imagen */
+    
+    object-fit: contain; /* Asegura que la imagen no se deforme */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    display: block; /* Necesario para que el margen auto funcione en imágenes */
+}
+
+
+/* Estilos para los botones de navegación */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #fff; /* Color de los botones de navegación */
+    position: absolute;
+    top: 50%; /* Coloca los botones en el centro vertical del carrusel */
+    transform: translateY(-50%); /* Asegura que estén exactamente en el medio */
+    z-index: 10; /* Asegura que los botones estén por encima del contenido */
+    width: 50px; /* Ajusta el tamaño de los botones */
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    border-radius: 50%; /* Botones redondeados */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
-}
-
-/* Estilo para los videos dentro del carrusel */
-.swiper-slide video {
-    width: 100%;
-    height: auto;
-    max-height: 100%;
-}
-
-/* Estilo para los botones de navegación */
-.swiper-button-next,
-.swiper-button-prev {
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
+    cursor: pointer;
 }
 
 .swiper-button-next {
-    right: 10px;
+    right: -25px; /* Coloca el botón "siguiente" fuera del contenedor, a la derecha */
 }
 
 .swiper-button-prev {
-    left: 10px;
+    left: -25px; /* Coloca el botón "anterior" fuera del contenedor, a la izquierda */
 }
 
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 20px; /* Ajusta el tamaño del ícono de la flecha */
+}
 
 
 .image-text-component {
@@ -173,7 +188,7 @@ body {
 }
 
 .global-footer {
-    background-color: #f35555;
+    background-color: #3ec0a6;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -181,6 +196,7 @@ body {
     padding: 40px 20px; /* Añadir padding para un mejor diseño */
     box-sizing: border-box;
     margin-bottom: 0px;
+    margin-top: 10px;
     flex-shrink: 0;
     position: static;
 }
@@ -263,7 +279,7 @@ body {
 }
 
 .card-header {
-    background-color: #f35555;
+    background-color: #3ec0a6;
     color: #fff;
     padding: 20px;
     text-align: center;
