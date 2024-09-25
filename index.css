@@ -13,32 +13,33 @@ body {
 
 .header-container {
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     align-items: center;
     margin: 0 auto;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #fff; /* Color de fondo */
-    border-bottom: 1px solid #ddd; /* Borde inferior opcional */
-    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
-    padding: 10px; /* Espaciado interno */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra opcional para efecto visual */
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    z-index: 1000;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .logo img {
     height: 80px;
 }
+
 .primary-menu {
     display: flex;
     align-items: center;
-    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    width: 100%;
 }
 
 .primary-menu ul {
     display: flex;
-    width: 100%; /* Ocupa todo el ancho disponible */
+    width: 100%;
     padding: 0;
     margin: 0;
     list-style: none;
@@ -49,7 +50,7 @@ body {
 }
 
 .primary-menu .modal-button-container {
-    margin-left: auto; /* Empuja este elemento hacia la derecha */
+    margin-left: auto;
 }
 
 .primary-menu .menu-item, .modal-button {
@@ -66,7 +67,6 @@ body {
     color: #eef0f3;
 }
 
-
 .main {
     display: flexbox;
     padding: 0px;
@@ -75,46 +75,42 @@ body {
     align-content: center;
 }
 
-/* Estilo para el contenedor del carrusel de videos */
 .hero-image-slider {
-    width: 100%; /* El carrusel ocupa todo el ancho del contenedor */
-    max-width: 1200px; /* Puedes ajustar el ancho máximo */
-    height: 500px; /* Altura del carrusel */
-    margin: 0 auto; /* Centrar el contenedor del carrusel */
-    position: relative; /* Necesario para el posicionamiento del contenido */
-    overflow: hidden; /* Oculta el contenido que se desborde */
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
 }
 
 .swiper-slide {
     display: flex;
-    justify-content: center; /* Centra la imagen horizontalmente */
-    align-items: center; /* Centra la imagen verticalmente */
-    height: 100%; /* Hace que las diapositivas ocupen toda la altura del carrusel */
-    text-align: center; /* Asegura que el contenido dentro de la diapositiva esté centrado */
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
 }
 
 .swiper-slide img {
-    width: 70%; /* Establece el ancho de la imagen al 70% del contenedor */
-    height: auto; /* Mantiene las proporciones de la imagen */
-    
-    object-fit: contain; /* Asegura que la imagen no se deforme */
-    margin: 0 auto; /* Centra la imagen horizontalmente */
-    display: block; /* Necesario para que el margen auto funcione en imágenes */
+    width: 70%;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
 }
 
-
-/* Estilos para los botones de navegación */
 .swiper-button-next,
 .swiper-button-prev {
-    color: #fff; /* Color de los botones de navegación */
+    color: #fff;
     position: absolute;
-    top: 50%; /* Coloca los botones en el centro vertical del carrusel */
-    transform: translateY(-50%); /* Asegura que estén exactamente en el medio */
-    z-index: 10; /* Asegura que los botones estén por encima del contenido */
-    width: 50px; /* Ajusta el tamaño de los botones */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 50px;
     height: 50px;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-    border-radius: 50%; /* Botones redondeados */
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,39 +118,39 @@ body {
 }
 
 .swiper-button-next {
-    right: -25px; /* Coloca el botón "siguiente" fuera del contenedor, a la derecha */
+    right: -25px;
 }
 
 .swiper-button-prev {
-    left: -25px; /* Coloca el botón "anterior" fuera del contenedor, a la izquierda */
+    left: -25px;
 }
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
-    font-size: 20px; /* Ajusta el tamaño del ícono de la flecha */
+    font-size: 20px;
 }
-
 
 .image-text-component {
     display: flex;
     align-items: center;
-    background-color: #555; /* Fondo gris para todo el componente */
+    background-color: #555;
     padding: 20px;
     margin: 5px;
-    color: white; /* Color blanco para el texto */
+    color: white;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
 }
 
 .image-text-component img {
     max-width: 100%;
     height: auto;
     object-fit: cover;
-    margin-right: 20px; /* Espacio entre la imagen y el texto */
+    margin-right: 20px;
 }
 
 .text-content {
     flex: 2;
-    text-align: left; /* Alineación del texto a la izquierda */
-    color: white; /* Color blanco para el texto */
+    text-align: left;
+    color: white;
 }
 
 .text-content .subtitle {
@@ -174,8 +170,6 @@ body {
     margin-right: 2em;
 }
 
-
-
 .cta-link {
     text-decoration: none;
     color: #007bff;
@@ -193,7 +187,7 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
-    padding: 40px 20px; /* Añadir padding para un mejor diseño */
+    padding: 40px 20px;
     box-sizing: border-box;
     margin-bottom: 0px;
     margin-top: 10px;
@@ -239,7 +233,6 @@ body {
     margin-top: 20px;
 }
 
-
 .section-title {
     text-align: center;
     margin: 40px 0;
@@ -253,12 +246,12 @@ body {
 
 .card-component {
     display: flex;
-    flex-wrap: wrap; /* Permite que las cards se ajusten al ancho del contenedor */
+    flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    max-width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho disponible */
+    max-width: 100%;
     margin: 0 auto;
-    padding: 0 20px; /* Añade padding para evitar que las cards toquen los bordes */
+    padding: 0 20px;
 }
 
 .card {
@@ -270,7 +263,7 @@ body {
     width: 100%;
     max-width: 350px;
     transition: transform 0.3s, box-shadow 0.3s;
-    flex: 1 1 300px; /* Permite que las cards se ajusten y crezcan según el espacio disponible */
+    flex: 1 1 300px;
 }
 
 .card:hover {
@@ -301,8 +294,7 @@ body {
     line-height: 1.5;
 }
 
-/*inicio implementacion de modal */
-.modal-button{
+.modal-button {
     padding: 0em;
     border: none;
     background: none;
@@ -355,6 +347,56 @@ body {
     text-decoration: none;
     cursor: pointer;
 }
-/* fin implementacion de modal */
 
+/* Media Queries */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
+    .primary-menu ul {
+        flex-direction: column;
+        width: auto;
+    }
+
+    .primary-menu li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .hero-image-slider {
+        height: auto;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+    }
+
+    .image-text-component {
+        flex-direction: column;
+    }
+
+    .card-component {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title h2 {
+        font-size: 2em;
+    }
+
+    .card-header h3 {
+        font-size: 1.2em;
+    }
+
+    .card-body p {
+        font-size: 0.9em;
+    }
+}
