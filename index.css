@@ -82,6 +82,7 @@ body {
     margin: 0 auto;
     position: relative;
     overflow: hidden;
+
 }
 
 .swiper-slide {
@@ -91,6 +92,7 @@ body {
     height: 100%;
     text-align: center;
 }
+
 
 .swiper-slide img {
     width: 70%;
@@ -111,10 +113,23 @@ body {
     height: 50px;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 50%;
+}
+
+/* Botones de navegación personalizados */
+.swiper-button-next,
+.swiper-button-prev {
+    color: white; /* Color de las flechas */
+}
+
+/* Indicadores de radio */
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     justify-content: center;
-    align-items: center;
-    cursor: pointer;
+    z-index: 10; /* Asegúrate de que estén por encima de las imágenes */
 }
 
 .swiper-button-next {
@@ -128,6 +143,22 @@ body {
 .swiper-button-next::after,
 .swiper-button-prev::after {
     font-size: 20px;
+input[type="radio"] {
+    display: none; /* Oculta los radio buttons */
+}
+
+.carousel-indicators label {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="radio"]:checked + label {
+    background-color: white; /* Color del indicador activo */
 }
 
 .image-text-component {
