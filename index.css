@@ -358,3 +358,9 @@ input[type="radio"]:checked + label {
 /* fin implementacion de modal */
 
 
+/* Media queries para diseño responsivo */
+@media (max-width: 768px) {
+    .hero-image-slider {
+        height: 300px; /* Altura menor en pantallas pequeñas */
+    }
+}
