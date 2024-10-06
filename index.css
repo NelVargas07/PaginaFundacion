@@ -143,6 +143,7 @@ body {
 .swiper-button-next::after,
 .swiper-button-prev::after {
     font-size: 20px;
+}
 input[type="radio"] {
     display: none; /* Oculta los radio buttons */
 }
