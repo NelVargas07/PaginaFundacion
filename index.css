@@ -480,3 +480,55 @@ input[type="radio"]:checked + label {
         font-size: 0.8em;
     }
 }
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .primary-menu ul {
+        flex-direction: column;
+        width: auto;
+    }
+
+    .primary-menu li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .hero-image-slider {
+        height: auto;
+        margin-top: 120px; /* Agrega margen superior al carrusel */
+    }
+
+    .swiper-slide img {
+        width: 100%;
+    }
+
+    .image-text-component {
+        flex-direction: column;
+    }
+
+    .card-component {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    .info-section {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .info-section h3 {
+        font-size: 1.3em;
+    }
+
+    .info-section p {
+        font-size: 0.9em;
+    }
+}
