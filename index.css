@@ -532,3 +532,21 @@ input[type="radio"]:checked + label {
         font-size: 0.9em;
     }
 }
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%; /* Hacer que el modal ocupe el 90% del ancho en pantallas pequeñas */
+        top: 50%; /* Asegura que el modal siga centrado verticalmente */
+        transform: translate(-50%, -50%); /* Mantiene el modal centrado horizontalmente */
+        padding: 15px; /* Reducir el padding en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        width: 95%; /* En pantallas aún más pequeñas, hacer que el modal sea casi de ancho completo */
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px; /* Aún más reducción del padding en pantallas muy pequeñas */
+    }
+}
